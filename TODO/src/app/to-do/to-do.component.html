@@ -1,0 +1,23 @@
+<div class=" container rounded-3 border border-2 border-dark my-5 bg-white" style="height:auto;">
+  <div>
+    <h1 class=" h1">To Do List</h1>
+    <div class="row">
+      <div class=" col-8">
+        <input class=" py-3 form-control shadow" placeholder="input your task" #task type="text" id="inputText">
+      </div>
+      <div class="col-2">
+        <!-- <i onclick="addList()" class=" btn btn-dark rounded-pill fas fa-4x fa-plus-circle "></i> -->
+        <button (click)="addTodo(task.value)" class=" mt-2 btn btn-dark"> Add </button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row rounded bg-white">
+    <div class=" col-12">
+
+      <ul class=" list-group" *ngFor="let item of items;" id="list">
+        <li class="list-group-item my-1">{{item.title}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
